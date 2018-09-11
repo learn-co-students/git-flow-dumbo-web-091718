@@ -21,7 +21,7 @@ describe "GIT" do
 
   it "4. What command allows you to add all previously all tracked, modified files
       and create a message, 'add img to index' for the commit in one command?" do
-    answer = "git commit -m 'add img to index'"
+    answer = "git add . &&  git commit -m  'add img to index'"
     encoded_answer = "00565151beeb1fa3682d6386399eaf87b788a5bc"
     expect(encode(answer)).to eq(encoded_answer)
   end
@@ -94,7 +94,7 @@ describe "GIT" do
 
   it "13. From the add-img branch, what command do you run to fetch and merge all the 
       changes from the add-img branch on the remote 'origin'?" do
-    answer = " git pull origin add-img"
+    answer = "git pull origin add-img"
     encoded_answer = "96887ba3f8740e85c07e4ee6bebba55ad8c779d0"
     expect(encode(answer)).to eq(encoded_answer)
   end
@@ -109,7 +109,7 @@ describe "GIT" do
 
 # describe "BRANCHING:" do
   it "15. What is the syntax for creating a new branch called 'style-image'?" do
-    answer = "git checkout -b style-image"
+    answer = "git branch style-image"
     encoded_answer = "a905f4cf88cdf57f8c406f2d5e7eb0acafe44c05"
     expect(encode(answer)).to eq(encoded_answer)
   end
